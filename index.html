@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francis Altares | AI Automation Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0c',
+                        cardBg: '#111115',
+                        cyberPurple: '#a855f7',
+                        electricBlue: '#3b82f6',
+                    },
+                    boxShadow: {
+                        'neon-purple': '0 0 15px rgba(168, 85, 247, 0.15)',
+                        'neon-blue': '0 0 15px rgba(59, 130, 246, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .glow-border-purple {
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            transition: all 0.4s ease;
+        }
+        .glow-border-purple:hover {
+            border-color: rgba(168, 85, 247, 0.6);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+            transform: translateY(-2px);
+        }
+        .glow-border-blue {
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.4s ease;
+        }
+        .glow-border-blue:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        /* Click Wave Effect CSS */
+        .click-pulse {
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        .click-wave {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.3);
+            transform: scale(0);
+            animation: wave-burst 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes wave-burst {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile Menu Toggle Helper Utilities */
+        .mobile-menu-active {
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans min-h-screen selection:bg-cyberPurple selection:text-white overflow-x-hidden">
+
+    <header class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center relative z-50" data-aos="fade-down" data-aos-duration="800">
+        <div class="flex items-center space-x-2 font-mono font-bold tracking-wider text-sm">
+            <span class="text-cyberPurple">❖</span>
+            <span>SYSTEM_BUILDER</span>
+        </div>
+        
+        <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-wide text-gray-400">
+            <a href="#expertise" class="hover:text-white transition">EXPERTISE</a>
+            <a href="#projects" class="hover:text-white transition">WORK</a>
+            <a href="#services" class="hover:text-white transition">SERVICES</a>
+            <a href="https://linkedin.com/in/francis-luigi-altares-26645a3a7" target="_blank" rel="noopener noreferrer" class="click-pulse border border-cyberPurple/50 px-4 py-2 rounded-md hover:border-cyberPurple hover:bg-cyberPurple/10 text-white transition shadow-neon-purple">CONNECT ON LINKEDIN</a>
+        </nav>
+
+        <button id="menu-btn" class="block md:hidden text-gray-400 hover:text-white focus:outline-none z-50" aria-label="Toggle Menu">
+            <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-darkBg/95 backdrop-blur-md z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center space-y-8 text-sm font-mono tracking-widest">
+        <a href="#expertise" class="mobile-link text-gray-400 hover:text-white text-lg transition">EXPERTISE</a>
+        <a href="#projects" class="mobile-link text-gray-400 hover:text-white text-lg transition">WORK</a>
+        <a href="#services" class="mobile-link text-gray-400 hover:text-white text-lg transition">SERVICES</a>
+        <a href="https://linkedin.com/in/francis-luigi-altares-26645a3a7" target="_blank" rel="noopener noreferrer" class="mobile-link border border-cyberPurple px-6 py-3 rounded-md text-white bg-cyberPurple/10 transition">CONNECT ON LINKEDIN</a>
+    </div>
+
+    <section class="max-w-5xl mx-auto px-6 pt-12 md:pt-16 pb-20 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 space-y-6 text-left" data-aos="fade-right" data-aos-duration="1000">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-2">
+                <div class="relative w-20 h-20 rounded-full p-[2px] bg-gradient-to-tr from-cyberPurple to-electricBlue shadow-neon-purple shrink-0">
+                    <img src="me.jpeg.png" alt="Francis Altares Headshot" class="w-full h-full object-cover rounded-full bg-cardBg">
+                </div>
+                <div>
+                    <span class="text-[10px] font-mono text-cyberPurple tracking-widest block uppercase font-bold">❖ DEPLOYED: SYSTEM_ENGINE_v1.0</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+                        FRANCIS ALTARES
+                    </h1>
+                </div>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyberPurple to-electricBlue">
+                AI AUTOMATION SPECIALIST.
+            </h2>
+            
+            <p class="text-gray-400 text-sm md:text-base max-w-xl font-light leading-relaxed">
+                AI Automation Specialist & Workflow Engineer. I build autonomous AI pipelines and custom workflows that eliminate repetitive tasks, optimize operational costs, and scale business operations.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 font-mono text-xs">
+                <a href="https://francisaltares24-cyber.github.io" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">GitHub ↗</a>
+                <span class="text-gray-700 hidden sm:inline">•</span>
+                <a href="https://linkedin.com/in/francis-luigi-altares-26645a3a7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">LinkedIn ↗</a>
+                <span class="text-gray-700 hidden sm:inline">•</span>
+                <a href="mailto:francisaltares24@gmail.com" class="text-gray-400 hover:text-white transition">Email ↗</a>
+            </div>
+        </div>
+        
+        <div class="md:col-span-5 flex justify-center relative w-full" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-cyberPurple to-electricBlue opacity-10 blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="border border-gray-800 bg-cardBg/50 p-5 sm:p-6 rounded-2xl w-full max-w-sm font-mono text-[11px] sm:text-xs text-gray-500 space-y-2 relative backdrop-blur-sm">
+                <div class="text-electricBlue">// Core Operational Engine</div>
+                <div><span class="text-cyberPurple">const</span> engineer = new AutomationSpecialist();</div>
+                <div>engineer.deploy(n8n_Architecture);</div>
+                <div>engineer.optimize(API_DataRouting);</div>
+                <div>engineer.scale(Intelligent_Pipelines);</div>
+                <div class="text-green-500">// Status: Ready to Deploy</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="max-w-5xl mx-auto px-6 py-12">
+        <h2 class="text-xs font-mono tracking-widest text-gray-500 uppercase mb-6" data-aos="fade-up">CORE EXPERTISE</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="click-pulse glow-border-purple bg-cardBg p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-bold text-lg tracking-tight text-white mb-4 flex items-center">
+                    <span class="w-2 h-2 rounded-full bg-cyberPurple mr-2"></span> Automation & AI Integration
+                </h3>
+                <ul class="space-y-4 text-sm font-light text-gray-400">
+                    <li>
+                        <strong class="text-gray-200 block font-medium">Workflow Architecture:</strong>
+                        n8n (Advanced / Self-Hosted Server Deployment), Zapier
+                    </li>
+                    <li>
+                        <strong class="text-gray-200 block font-medium">AI Engine Ops:</strong>
+                        OpenAI API (GPT models), Anthropic API (Claude), Prompt Engineering
+                    </li>
+                    <li>
+                        <strong class="text-gray-200 block font-medium">Data Routing:</strong>
+                        Webhooks, REST APIs, JSON Parsing, HTTP Requests
+                    </li>
+                </ul>
+            </div>
+            <div class="click-pulse glow-border-blue bg-cardBg p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="font-bold text-lg tracking-tight text-white mb-4 flex items-center">
+                    <span class="w-2 h-2 rounded-full bg-electricBlue mr-2"></span> Technical Skillset
+                </h3>
+                <ul class="space-y-4 text-sm font-light text-gray-400">
+                    <li>
+                        <strong class="text-gray-200 block font-medium">Backend & Scripting:</strong>
+                        Python, JavaScript (Data Transformations)
+                    </li>
+                    <li>
+                        <strong class="text-gray-200 block font-medium">Databases:</strong>
+                        SQL (Relational database management, querying, and logging)
+                    </li>
+                    <li>
+                        <strong class="text-gray-200 block font-medium">Frontend Design:</strong>
+                        HTML5, CSS3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-16">
+        <h2 class="text-xs font-mono tracking-widest text-gray-500 uppercase mb-6" data-aos="fade-up">PROOF OF WORK <span class="text-cyberPurple">(DEPLOYED SYSTEMS)</span></h2>
+        
+        <div class="space-y-8">
+            <div class="click-pulse glow-border-purple bg-cardBg p-6 md:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-6" data-aos="fade-up">
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4 order-2 lg:order-1">
+                    <div>
+                        <div class="flex">
+                            <span class="text-xs font-mono bg-cyberPurple/10 text-cyberPurple border border-cyberPurple/20 px-2.5 py-1 rounded-md">n8n Engine</span>
+                        </div>
+                        <h3 class="font-bold text-xl tracking-tight text-white mt-3">Advanced Short-Form Content Repurposer</h3>
+                        <p class="text-xs font-mono text-gray-500 mt-1">Objective: Built a scalable, self-hosted automation pipeline that transforms long-form video content into optimized short-form clips for multi-platform publishing, eliminating 90% of manual editing and uploading overhead.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs font-light text-gray-400">
+                            <p><strong>Challenge:</strong> Manually cutting, formatting, writing descriptions, and scheduling video clips across multiple platforms (TikTok, YouTube Shorts, Reels) is highly repetitive. Standard cloud automation tools charge heavily per task, making high-volume content scaling expensive.</p>
+                            <p><strong>Solution:</strong> Architected a self-hosted n8n workflow triggered instantly by incoming webhooks. Integrated LangChain-style data flows to pass data cleanly through a Basic LLM Chain node. Leveraged Google Gemini models along with a Structured Output Parser to read media logs, identify engaging angles, and autonomously structure optimized short-form media logs entirely with zero task-fee overhead.</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800/60">
+                        <span class="text-xs font-mono text-gray-500 block uppercase">Results:</span>
+                        <span class="text-base sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyberPurple to-white">100% autonomous curation. Zero-cost execution via private hosting nodes.</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 border border-gray-800 bg-darkBg/50 rounded-xl overflow-hidden flex items-center justify-center min-h-[180px] sm:min-h-[220px] order-1 lg:order-2">
+                    <img src="n8n.jpeg.png" alt="n8n LangChain Workflow Canvas" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+
+            <div class="click-pulse glow-border-blue bg-cardBg p-6 md:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-6" data-aos="fade-up">
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4 order-2 lg:order-1">
+                    <div>
+                        <div class="flex">
+                            <span class="text-xs font-mono bg-electricBlue/10 text-electricBlue border border-electricBlue/20 px-2.5 py-1 rounded-md">Zapier Ecosystem</span>
+                        </div>
+                        <h3 class="font-bold text-xl tracking-tight text-white mt-3">Cloud-Based Video Repurposing Pipeline</h3>
+                        <p class="text-xs font-mono text-gray-500 mt-1">Objective: Designed a rapid-deployment automation workflow using Zapier to seamlessly move raw media assets, trigger AI content processing, and notify production teams instantly.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs font-light text-gray-400">
+                            <p><strong>Challenge:</strong> Content production teams often experience operational bottlenecks and communication delays when raw assets are handed off manually from creators to editors.</p>
+                            <p><strong>Solution:</strong> Created an instant multi-step Zap triggered immediately when a new video lands on a designated YouTube channel. Implemented native integration with Google AI Studio (Gemini) to cleanly stream metadata, parse transcripts, and autonomously generate optimized summaries. This structured data is instantly compiled and pushed into a dynamic Google Docs system for the production team to access immediately.</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800/60">
+                        <span class="text-xs font-mono text-gray-400 block uppercase">Results:</span>
+                        <span class="text-base sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-electricBlue to-white">Turnaround latency slashed to under 5 minutes. 100% operational alignment.</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 border border-gray-800 bg-darkBg/50 rounded-xl overflow-hidden flex items-center justify-center min-h-[180px] sm:min-h-[220px] order-1 lg:order-2">
+                    <img src="zap.jpeg.png" alt="Zapier AI Studio Workflow Steps" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="max-w-5xl mx-auto px-6 py-12">
+        <h2 class="text-xs font-mono tracking-widest text-gray-500 uppercase mb-6" data-aos="fade-up">SOLUTIONS & SERVICES</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border border-gray-800 bg-cardBg/30 p-6 rounded-xl hover:border-gray-700 transition" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-white font-medium text-sm mb-2">Custom Workflow Engineering</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    Connecting apps that don't natively talk to each other using webhooks, APIs, and custom data formatting.
+                </p>
+            </div>
+            <div class="border border-gray-800 bg-cardBg/30 p-6 rounded-xl hover:border-gray-700 transition" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-white font-medium text-sm mb-2">AI Operations (AiOps)</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    Embedding Large Language Models into existing company workflows to automate data extraction, customer responses, or content generation.
+                </p>
+            </div>
+            <div class="border border-gray-800 bg-cardBg/30 p-6 rounded-xl hover:border-gray-700 transition" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-white font-medium text-sm mb-2">Self-Hosted Automation Setup</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    Migrating businesses away from expensive software (like Zapier/Make) onto cost-efficient, self-hosted n8n infrastructure to dramatically lower software overhead.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="max-w-5xl mx-auto px-6 pt-16 pb-24 border-t border-gray-900/60 mt-12 space-y-12" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-8 space-y-3">
+                <h2 class="text-2xl font-bold tracking-tight text-white">Let's Optimize Your Systems</h2>
+                <p class="text-gray-400 text-xs md:text-sm font-light leading-relaxed max-w-2xl">
+                    I help busy entrepreneurs, digital agencies, and content teams buy back their time by replacing clunky, manual work with intelligent, automated pipelines. Available for contract automation projects, workflow consulting, and tech-stack migrations.
+                </p>
+            </div>
+            <div class="md:col-span-4 flex md:justify-end w-full">
+                <a href="mailto:francisaltares24@gmail.com" class="click-pulse w-full sm:w-auto text-center bg-gradient-to-r from-cyberPurple to-electricBlue text-white text-xs font-bold px-6 py-3 rounded-lg hover:opacity-90 transition shadow-neon-purple tracking-wider uppercase">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-gray-900 text-[11px] font-mono text-gray-600 gap-4">
+            <div>
+                &copy; 2026 Francis Altares. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://francisaltares24-cyber.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">GitHub</a>
+                <a href="https://linkedin.com/in/francis-luigi-altares-26645a3a7" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">LinkedIn</a>
+                <a href="mailto:francisaltares24@gmail.com" class="hover:text-gray-400 transition">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            once: true,
+            offset: 120,
+        });
+
+        // Mobile Hamburger Navigation Functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const body = document.body;
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
+            
+            if (isOpen) {
+                // Close menu
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                body.classList.remove('mobile-menu-active');
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                body.classList.add('mobile-menu-active');
+            }
+        });
+
+        // Close Mobile Menu on link clicks
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                body.classList.remove('mobile-menu-active');
+            });
+        });
+
+        // Click Pulse Wave Implementation
+        document.querySelectorAll('.click-pulse').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const wave = document.createElement('span');
+                wave.classList.add('click-wave');
+                wave.style.left = `${x}px`;
+                wave.style.top = `${y}px`;
+                
+                const size = Math.max(rect.width, rect.height);
+                wave.style.width = `${size}px`;
+                wave.style.height = `${size}px`;
+                wave.style.marginLeft = `${-size/2}px`;
+                wave.style.marginTop = `${-size/2}px`;
+                
+                this.appendChild(wave);
+                
+                wave.addEventListener('animationend', () => {
+                    wave.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
